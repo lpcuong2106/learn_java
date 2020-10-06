@@ -11,6 +11,9 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JScrollPane;
 import javax.swing.JRadioButton;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JTextArea;
 
 public class bai3 extends JFrame {
 
@@ -95,6 +98,23 @@ public class bai3 extends JFrame {
 		
 		JLabel lblTui = new JLabel("Độ tuổi");
 		splitPane_4.setLeftComponent(lblTui);
+		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Dưới 20", "20-30", "30-40", "Trên 40"}));
+		splitPane_4.setRightComponent(comboBox);
+		
+		JScrollPane scrollPane_3 = new JScrollPane();
+		scrollPane_2.setViewportView(scrollPane_3);
+		
+		JSplitPane splitPane_5 = new JSplitPane();
+		scrollPane_3.setColumnHeaderView(splitPane_5);
+		
+		JLabel lblaCh = new JLabel("Địa chỉ");
+		splitPane_5.setLeftComponent(lblaCh);
+		
+		JTextArea textArea = new JTextArea();
+		textArea.setRows(4);
+		splitPane_5.setRightComponent(textArea);
 	}
 
 }
