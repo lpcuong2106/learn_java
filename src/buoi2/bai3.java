@@ -14,6 +14,7 @@ import javax.swing.JRadioButton;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JTextArea;
+import javax.swing.JButton;
 
 public class bai3 extends JFrame {
 
@@ -115,6 +116,18 @@ public class bai3 extends JFrame {
 		JTextArea textArea = new JTextArea();
 		textArea.setRows(4);
 		splitPane_5.setRightComponent(textArea);
+		
+		JScrollPane scrollPane_4 = new JScrollPane();
+		scrollPane_3.setViewportView(scrollPane_4);
+		
+		JSplitPane splitPane_6 = new JSplitPane();
+		scrollPane_4.setColumnHeaderView(splitPane_6);
+		
+		JButton btnLu = new JButton("Lưu");
+		splitPane_6.setLeftComponent(btnLu);
+		
+		JButton btnHy = new JButton("Hủy");
+		splitPane_6.setRightComponent(btnHy);
 	}
 
 }
